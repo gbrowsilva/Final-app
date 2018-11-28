@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Appfinal</string>
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+
+    <string name="btn_apagar">c</string>
+
+    <string name="btn_1">1</string>
+    <string name="btn_2">2</string>
+    <string name="btn_3">3</string>
+    <string name="btn_4">4</string>
+    <string name="btn_5">5</string>
+    <string name="btn_6">6</string>
+    <string name="btn_7">7</string>
+    <string name="btn_8">8</string>
+    <string name="btn_9">9</string>
+    <string name="btn_0">0</string>
+    <string name="btn_soma">+</string>
+    <string name="btn_divisao">/</string>
+    <string name="btn_subtracao">-</string>
+    <string name="btn_multiplicacao">*</string>
+    <string name="btn_igual">=</string>
+    <string name="btn_ponto">,</string>
+
+
 </resources>
