@@ -70,18 +70,23 @@ public class MainActivity extends AppCompatActivity implements
 
         int id = menuItem.getItemId();
         if (id == R.id.configuracao) {
-            Toast.makeText(getApplicationContext(),
-                    "Abrir configurações", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, configuracao.class);
+            startActivity(intent);
         }else if (id ==R.id.calcularMedia){
-            Toast.makeText(getApplicationContext(),
-                    "Abrir calculadora média", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, calcularmedia.class);
+            startActivity(intent);
+
         }else if (id ==R.id.calculadora){
 
             Intent intent = new Intent(MainActivity.this, Calculadora.class);
             startActivity(intent);
 
-            Toast.makeText(getApplicationContext(),
-                    "Abrir Calculadora", Toast.LENGTH_SHORT).show();
+        }else if (id ==R.id.chamadaFalsa) {
+
+            Intent intent = new Intent(MainActivity.this, SimulandoChamada.class);
+            startActivity(intent);
+
         }
 
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);

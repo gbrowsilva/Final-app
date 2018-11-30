@@ -16,9 +16,7 @@
             android:title="Chamada Falsa"
             android:icon="@drawable/ic_menu_chamada"/>
 
-        <item android:id="@+id/perfil"
-            android:title="Perfil"
-            android:icon="@drawable/ic_menu_perfil"/>
+
     </group>
 
     <item android:id="@+id/configuracao"
