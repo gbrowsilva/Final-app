@@ -1,6 +1,7 @@
 package com.lourdinas.appfinal;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
@@ -21,7 +23,24 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+
+            final TextView txtnome = (TextView) findViewById(R.id.text_NOME);
+            final TextView txtidade = (TextView) findViewById(R.id.text_idade);
+            final TextView novonascimento = (TextView) findViewById(R.id.text_nascimento);
+            final TextView txtemail = (TextView) findViewById(R.id.text_email1);
+
+            SharedPreferences perfil = getSharedPreferences("dados", MODE_PRIVATE);
+            String nome = perfil.getString("nome", "");
+            String idade = perfil.getString("idade", "");
+            String nascimento = perfil.getString("pais", "");
+            String email = perfil.getString("email", "");
+            txtnome.setText(nome);
+            txtidade.setText(idade);
+            novonascimento.setText(nascimento);
+            txtemail.setText(email);
+
+
+            Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
@@ -72,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements
         if (id == R.id.configuracao) {
             Intent intent = new Intent(MainActivity.this, configuracao.class);
             startActivity(intent);
+
         }else if (id ==R.id.calcularMedia){
 
             Intent intent = new Intent(MainActivity.this, calcularmedia.class);
