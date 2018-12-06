@@ -124,8 +124,10 @@ public class SimulandoChamada extends AppCompatActivity {
                             ActivityCompat.requestPermissions(SimulandoChamada.this,
                                     new String[]{Manifest.permission.CALL_PHONE}, 0);
                         }
+
                         startActivity(intent);
                         break;
+
                 }
             }
         };

@@ -22,7 +22,7 @@ public class telainicial extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_telainicial);
 
-        meusDados = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
+        meusDados = getSharedPreferences("dados", Context.MODE_PRIVATE);
 
         Button btnLogin = (Button) findViewById(R.id.btn_login);
         final EditText edtEmail = (EditText)findViewById(R.id.edt_email);

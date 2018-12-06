@@ -26,21 +26,23 @@ public class MainActivity extends AppCompatActivity implements
 
             final TextView txtnome = (TextView) findViewById(R.id.text_NOME);
             final TextView txtidade = (TextView) findViewById(R.id.text_idade);
-            final TextView novonascimento = (TextView) findViewById(R.id.text_nascimento);
+            final TextView txtnascimento = (TextView) findViewById(R.id.text_nascimento);
             final TextView txtemail = (TextView) findViewById(R.id.text_email1);
 
             SharedPreferences perfil = getSharedPreferences("dados", MODE_PRIVATE);
+
             String nome = perfil.getString("nome", "");
             String idade = perfil.getString("idade", "");
-            String nascimento = perfil.getString("pais", "");
+            String nascimento = perfil.getString("nascimento", "");
             String email = perfil.getString("email", "");
+
             txtnome.setText(nome);
             txtidade.setText(idade);
-            novonascimento.setText(nascimento);
+            txtnascimento.setText(nascimento);
             txtemail.setText(email);
 
 
-            Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,

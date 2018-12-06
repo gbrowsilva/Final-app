@@ -34,12 +34,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="264dp"
+        android:layout_width="250dp"
         android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="219dp"
-        android:background="#ececec"
+        android:background="@android:color/darker_gray"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout"
@@ -166,10 +166,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="103dp"
+        android:layout_width="110dp"
         android:layout_height="300dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"

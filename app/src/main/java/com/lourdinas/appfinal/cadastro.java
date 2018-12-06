@@ -20,7 +20,7 @@ public class cadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        meusDados = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
+        meusDados = getSharedPreferences("dados", Context.MODE_PRIVATE);
 
         Button cadastrar = (Button) findViewById(R.id.btn_cadastrar);
         final EditText novoidade = (EditText)findViewById(R.id.edit_idade);
